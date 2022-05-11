@@ -1,0 +1,18 @@
+# Pull the image from the docker hub
+docker pull ubuntu:latest
+
+#Login to the docker hub
+docker login
+
+#Tag the docker image to your registry
+docker tag ubuntu:latest mamirucce/gitdocker1:v1
+
+#Push the image to your registry
+docker push mamirucce/gitdocker1:v1
+
+
+#Pull the image from your registry
+docker pull mamirucce/gitdocker1:v1
+
+#run the image in your local
+docker run -it -d  mamirucce/gitdocker1:v1
